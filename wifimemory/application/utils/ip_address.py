@@ -9,11 +9,3 @@ def get_ip_address(interface="eth0"):
     except (ValueError, KeyError):
         print(f"Error retrieving IP address for interface {interface}")
         return None
-
-
-if __name__ == "__main__":
-    ip = get_ip_address()
-    if ip:
-        print(f"Your IP address on {interface} is: {ip}")
-    else:
-        print("Failed to get IP address.")
