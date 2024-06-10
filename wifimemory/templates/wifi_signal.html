@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WiFi Signal Status</title>
+</head>
+<body>
+  <h1>WiFi Signal Status</h1>
+  {% if form %}  <h2>Configure Monitoring</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Start Monitoring</button>
+  </form>
+  {% endif %}
+
+  {% if signal_data %}  <h2>Real-time Signal Strength</h2>
+  <p>... (Display signal data dynamically) ...</p>
+  {% else %}
+  <p>No signal data available yet. Start monitoring to see real-time signal strength.</p>
+  {% endif %}
+</body>
+</html>

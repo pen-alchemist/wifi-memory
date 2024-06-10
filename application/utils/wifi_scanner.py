@@ -30,12 +30,3 @@ def sniff_beacon(interface):
                        'rssi': rssi}
 
         info_results.append(scan_result)
-
-
-# Get user input for network interface
-iface = input("Enter your wireless interface (e.g., wlan0): ")
-
-# Start sniffing for beacons
-sniff_beacon(iface)
-
-print("Scan completed!")
