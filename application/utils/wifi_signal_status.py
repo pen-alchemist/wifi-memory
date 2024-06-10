@@ -15,12 +15,3 @@ def process_packet(packet):
         # Extract signal strength (received signal strength indication - RSSI)
         rssi = packet.dBm_antsignal
         print(f"BSSID: {bssid} - Signal Strength (RSSI): {rssi} dBm")
-
-
-# Get user input for network interface
-iface = input("Enter your wireless interface (e.g., wlan0): ")
-
-# Start monitoring signals
-monitor_signals(iface)
-
-print("Signal monitoring stopped.")
